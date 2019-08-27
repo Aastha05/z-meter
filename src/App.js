@@ -1,17 +1,14 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import Readings from './pages/Readings';
+import ApplicationStateProvider from './redux/ApplicationStateProvider';
+import ApplicationLayout from './components/ApplicationLayout';
 
-const Page = lazy(() => import('./pages/Readings'));
 
 function App({ }) {
   return (
-    <div>
-      <h1>Title</h1>
-      <Suspense fallback="Loading">
-        <Page />
-      </Suspense>
-    </div>
+    <ApplicationStateProvider>
+      <ApplicationLayout />
+    </ApplicationStateProvider>
   );
 }
 
