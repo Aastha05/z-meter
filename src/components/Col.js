@@ -13,10 +13,7 @@ function getColWrapperCSS(width) {
   return {
     display: 'flex',
     flexDirection: 'column',
-    paddingLeft: '0.8rem',
-    paddingRight: '0.8rem',
     width: `${width ? width * 100 : 'auto'}%`,
     flexGrow: 1,
-    border: '2px solid blue',
   };
 }

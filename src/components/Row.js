@@ -1,23 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-export default function Row({children}) {
+export default function Row({children, margin}) {
   return (
-    <div css={getHeaderWrapperCSS()}>
+    <div css={getHeaderWrapperCSS(margin)}>
       {children}
     </div>
   );
 }
 
-function getHeaderWrapperCSS() {
+function getHeaderWrapperCSS(margin) {
   return {
     display: 'flex',
-    flexDirection: 'row',
-    padding: '0.75rem 0.9375rem',
-    flex: '1',
-    border: '1px solid red',
-    width: '100%',
-    marginLeft: '-0.8rem',
-    marginRight: '-0.8rem'
+    flexDirection: 'row'
   };
 }

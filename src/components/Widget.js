@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-export default function Widget({chidren}) {
+export default function Widget({children}) {
   return (
     <div css={getWidgetCSS()}>
-      {chidren}
+      {children}
     </div>
   );
 }
@@ -13,6 +13,6 @@ function getWidgetCSS() {
   return {
     display: 'flex',
     flexDirection: 'column',
-    width: '100%'
+    width: '100%',
   };
 }

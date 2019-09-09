@@ -3,27 +3,34 @@ import { jsx, Global } from '@emotion/core';
 import Row from './Row';
 import Col from './Col';
 import MainNav from './MainNav';
+import SecondaryNav from './SecondaryNav';
+import ApplicationContent from './ApplicationContent';
+import Widget from './Widget';
 
 export default function ApplicationLayout({ header, body, footer }) {
   return (
-    <Row>
-      <Col width={1 / 3}>
-        <MainNav />
-      </Col>
-      <Col width={1 / 5}>
-        left 2
-      </Col>
-      <Col>
-        main
-      </Col>
-    </Row>
+    <Widget>
+      <Row margin={-8}>
+        <Col width={1 / 4}>
+          <MainNav />
+        </Col>
+        <Col width={1 / 4}>
+          <SecondaryNav />
+        </Col>
+        <Col width={1}>
+          <ApplicationContent />
+        </Col>
+      </Row>
+    </Widget>
   );
 }
 
 function getGlobalCSS() {
   return `
+  @import url('https://fonts.googleapis.com/css?family=Arsenal&display=swap');
     body {
-      margin: 0;
+      margin: 0px;
+      
     }
   `
 }
