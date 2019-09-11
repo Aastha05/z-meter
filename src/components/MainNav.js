@@ -1,29 +1,20 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import Header from './Header';
-import LeftNav from './LeftNav';
-import Widget from './Widget';
+import Menu from './Menu';
 
 export default function MainNav() {
   return (
-    <div>
+    <div css={getMainNavWrapperCSS}>
       <Header>
         <div css={getLogoTitleCSS}>
           <span>z</span>meter
         </div>
       </Header>
-      <LeftNav />
+      <Menu />
     </div>
   );
 }
-
-// function getMainNavWrapperCSS() {
-//   return {
-//     // border:'1px solid grey',
-//     height: '100vh',
-//     backgroundColor: '#fff'
-//   }
-// }
 
 function getLogoTitleCSS() {
   return {
@@ -36,10 +27,8 @@ function getLogoTitleCSS() {
   };
 }
 
-// function Widget({ chidren }) {
-//   return (
-//     <div css={getHeaderWrapperCSS()}>
-//       {chidren}
-//     </div>
-//   );
-// }
+function getMainNavWrapperCSS() {
+  return {
+    height: '100vh'
+  };
+}

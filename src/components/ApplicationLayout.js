@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Global } from '@emotion/core';
+import { jsx, Global, css } from '@emotion/core';
 import Row from './Row';
 import Col from './Col';
 import MainNav from './MainNav';
@@ -21,18 +21,19 @@ export default function ApplicationLayout({ header, body, footer }) {
           <ApplicationContent />
         </Col>
       </Row>
+      <Global styles={getGlobalCSS()} />
     </Widget>
   );
 }
 
 function getGlobalCSS() {
-  return `
+  return css(`
   @import url('https://fonts.googleapis.com/css?family=Arsenal&display=swap');
     body {
       margin: 0px;
-      
+      font-family: 'Arsenal', sans-serif;
     }
-  `
+  `)
 }
 
 function getApplicationLayoutCSS() {

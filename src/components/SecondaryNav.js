@@ -24,10 +24,7 @@ export default function SecondaryNav() {
 function getSecondNavWrapperCSS() {
   return {
     height: '100vh',
-    backgroundColor:'f8f1f1',
-    Header: {
-      borderBottom: '1px solid red'
-    }
+    backgroundColor:'f8f1f1'
   }
 }
 

@@ -7,15 +7,13 @@ export default function Header({ children }) {
   );
 }
 
-function getHeaderCSS(){
+function getHeaderCSS() {
   return {
-    height: '40px',
-    // borderBottom: '1px solid grey',
-    padding: '1rem',
+    height: '32px',
+    padding: '16px',
     display: 'flex',
-    flexDirection: 'row',
     alignItems: 'center',
-    // justifyContent: 'center',
+    boxShadow: '1px 1px 10px rgba(0,0,0,.05)'
   }
 }
 

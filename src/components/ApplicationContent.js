@@ -27,9 +27,7 @@ export default function ApplicationContent() {
 
 function getAppContentWrapperCSS() {
   return {
-    // border:'1px solid grey',
-    height: '100vh',
-    backgroundColor: '#fff'
+    height: '100vh'
   }
 }
 
