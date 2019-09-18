@@ -1,18 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-export default function Menu({ children }) {
+export default function Status({ children }) {
   return (
-    <div css={getLeftNavCSS}>
+    <div css={getStatusCSS}>
       <ul css={getUlCSS}>
         {children}
       </ul>
     </div>
-  );
+  )
 }
 
-
-function getLeftNavCSS() {
+function getStatusCSS() {
   return {
 
   }

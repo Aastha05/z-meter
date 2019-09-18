@@ -1,23 +1,24 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { useContext } from 'react';
-import { ApplicationStateContext } from '../redux/ApplicationStateProvider';
 
-
-export default function Logo() {
-  const { state: { appTitle } } = useContext(ApplicationStateContext);
+/**
+ *
+ * @param {{label: string;}} props
+ * @example```jsx
+ * <Logo label={'ZMeter'} />
+ * ```
+ */
+export default function Logo({ label }) {
   return (
-    <div css={getLogoCSS}>
-      {appTitle}
+    <div css={getLogoTitleCSS()}>
+      <h4>{label}</h4>
     </div>
-  );
+  )
 }
 
-function getLogoCSS() {
+function getLogoTitleCSS() {
   return {
-  color: '#216583',
-  fontSize: '30px',
-  
+    color: '6f0765',
+    textTransform: 'uppercase',
   };
 }
-

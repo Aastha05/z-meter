@@ -7,7 +7,7 @@ import SecondaryNav from './SecondaryNav';
 import ApplicationContent from './ApplicationContent';
 import Widget from './Widget';
 
-export default function ApplicationLayout({ header, body, footer }) {
+export default function ApplicationLayout({ }) {
   return (
     <Widget>
       <Row margin={-8}>
@@ -28,10 +28,10 @@ export default function ApplicationLayout({ header, body, footer }) {
 
 function getGlobalCSS() {
   return css(`
-  @import url('https://fonts.googleapis.com/css?family=Arsenal&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
     body {
       margin: 0px;
-      font-family: 'Arsenal', sans-serif;
+      font-family: 'Rubik', sans-serif;
     }
   `)
 }

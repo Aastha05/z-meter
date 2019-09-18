@@ -1,19 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import Icon from './Icon';
 
-export default function MenuItem({ isActive, label, icon }) {
+export default function MenuItem({ isActive, label }) {
   return (
-    <div>
+    <li>
       <div css={getMenuItemCSS(isActive)}>
-        <div css={getMenuIconCSS()}>
-          <Icon name={icon} size="s" />
-        </div>
         <div css={getMenuTextCSS()}>
-          <h4>{label}</h4>
+          <h5>{label}</h5>
         </div>
       </div>
-    </div>
+    </li>
   );
 }
 
@@ -29,17 +25,10 @@ function getMenuItemCSS(isActive) {
     '&:hover': {
       backgroundColor: 'rgba(0,0,0,.05)',
     }
-    // justifyContent: 'space-evenly'
-  }
-}
-
-function getMenuIconCSS() {
-  return {
   }
 }
 
 function getMenuTextCSS() {
   return {
-    marginLeft: '20px'
   }
 }

@@ -2,25 +2,37 @@
 import { jsx } from '@emotion/core';
 import Header from './Header';
 import Icon from './Icon';
-import userIcon from '../assets/images/user.svg'
-import notifyIcon from '../assets/images/bell.svg'
+import TopRightNav from './TopRightNav';
+import Table from './Table';
+import TableHead from './TableHead';
+import TableBody from './TableBody';
+import TableHeadingData from './TableHeadingData';
+import TableData from './TableData';
+import TableRow from './TableRow';
 
 export default function ApplicationContent() {
   return (
     <div css={getAppContentWrapperCSS}>
       <Header>
-        <div css={getTopNavCSS}>
-          <div css={getUserImageCSS}>
-            <img src={userIcon} width="20px" hieght="20px" alt={'user'}></img>
-          </div>
-          <div css={getUserNameCSS}>
-            Hey, Simple
-          </div>
-          <div css={getNotifyCSS}>
-            <Icon name={'bell'} size={'s'}/>
-          </div>
-        </div>
+        <TopRightNav
+          userImg={<Icon name="user" size="s" />}
+          icon={<Icon name="bell" size="s" />}
+          userName="Hey, Simple" />
       </Header>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableHeadingData>{'ID'}</TableHeadingData>
+            <TableHeadingData>{'Title'}</TableHeadingData>
+            <TableHeadingData>{'Description'}</TableHeadingData>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableData>{'101'}</TableData>
+          <TableData>{'API'}</TableData>
+          <TableData>{'Create Backend APIs'}</TableData>
+        </TableBody>
+      </Table>
     </div>
   );
 }
@@ -31,33 +43,3 @@ function getAppContentWrapperCSS() {
   }
 }
 
-function getTopNavCSS() {
-  return {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    flex: '1 auto',
-  };
-}
-
-function getUserImageCSS(){
-  return {
-    border: 'transparent solid 1px',
-    marginRight: '0.5rem'
-  }
-}
-
-function getUserNameCSS(){
-  return {
-    color: 'grey',
-    marginRight: '2rem'
-
-  }
-}
-
-function getNotifyCSS() {
-  return {
-    marginRight: 'rem'
-  }
-}

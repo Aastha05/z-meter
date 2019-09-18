@@ -1,44 +1,29 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { useContext } from 'react';
-import { ApplicationStateContext } from '../redux/ApplicationStateProvider';
-import { setAllReadings, setActiveReadingIndex } from '../redux/reducer';
-import Button from './Button';
+import TableHead from './TableHead';
+import TableBody from './TableBody';
 
-export default function Table() {
-  const { state: { readings = [], activeReadingIndex }, dispatch } = useContext(ApplicationStateContext);
+export default function Table({ children }) {
   return (
-    <div>
-      <ul css={getBillListCSS()}>
-        {
-          readings.map((reading, index) => (
-            <li key={`reading-${index}`} css={getBillItemCSS(index, activeReadingIndex)}>
-              Name: {reading.name}, Bill Amount: {reading.amount}
-              <Button
-                onClick={() => {
-                  dispatch(setActiveReadingIndex(index))
-                }}
-              >
-                View
-              </Button>
-            </li>
-          ))
-        }
-      </ul>
+    <div css={getTableWrapperCSS()}>
+      <table css={getTableStyleCSS()}>
+        {children}
+      </table>
     </div>
-  );
+  )
 }
 
-function getBillListCSS() {
+
+function getTableWrapperCSS() {
   return {
-    padding: 0
-  };
+    display: 'flex'
+  }
+
+}
+function getTableStyleCSS() {
+  return {
+    width: '100%',
+    borderCollapse: 'collapse'
+  }
 }
 
-function getBillItemCSS(index, activeReadingIndex) {
-  return {
-    fontWeight: activeReadingIndex === index ? 'bold' : 'normal',
-    listStyle: 'none',
-    padding: '0.5rem'
-  };
-}

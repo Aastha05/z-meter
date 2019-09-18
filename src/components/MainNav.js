@@ -2,29 +2,24 @@
 import { jsx } from '@emotion/core';
 import Header from './Header';
 import Menu from './Menu';
+import Logo from './Logo';
+import MenuItem from './MenuItem';
+import Icon from './Icon';
 
 export default function MainNav() {
   return (
     <div css={getMainNavWrapperCSS}>
       <Header>
-        <div css={getLogoTitleCSS}>
-          <span>z</span>meter
-        </div>
+        <Logo label="Z-Task" />
       </Header>
-      <Menu />
+      <Menu>
+        <MenuItem label='Today' />
+        <MenuItem label='Tommorow' />
+        <MenuItem label='This Week' />
+        <MenuItem label='This Month' />
+      </Menu>
     </div>
   );
-}
-
-function getLogoTitleCSS() {
-  return {
-    color: '6f0765',
-    textTransform: 'uppercase',
-    fontSize: '20px',
-    span: {
-      fontSize: '16px'
-    }
-  };
 }
 
 function getMainNavWrapperCSS() {

@@ -1,21 +1,23 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import Header from './Header';
-import addIcon from '../assets/images/add.svg';
+import CustomButton from './NewTaskButton';
+import Icon from './Icon';
+import Status from './Status';
+import StatusItem from './StatusItem';
+import NewTaskButton from './NewTaskButton';
 
 export default function SecondaryNav() {
   return (
     <div css={getSecondNavWrapperCSS}>
       <Header>
-        <div css={getButtonCSS}>
-          <div css={getButtonNameCSS}>
-            New Meter
-          </div>
-          <div css={getButtonIconCSS}>
-            <img src={addIcon} alt={'add'} width="15px" height="15px"></img>
-          </div>
-        </div>
+        <NewTaskButton label="New Task" icon={<Icon name="add" size="s" />} />
       </Header>
+      <Status>
+        <StatusItem label={'In Progress'} status={StatusItem.status.inProgress} isActive />
+        <StatusItem label={'To Do'} status={StatusItem.status.todo} />
+        <StatusItem label={'Completed'} status={StatusItem.status.complete} />
+      </Status>
     </div>
   );
 }
@@ -24,31 +26,7 @@ export default function SecondaryNav() {
 function getSecondNavWrapperCSS() {
   return {
     height: '100vh',
-    backgroundColor:'f8f1f1'
+    backgroundColor: 'f8f1f1'
   }
 }
 
-function getButtonCSS(){
-  return {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent:'space-around',
-    flex: '1',
-    // border: '1px solid red'
-  }
-}
-
-function getButtonNameCSS(){
-  return {
-    color: 'grey',
-    fontStyle: 'bold',
-    textTransform: 'uppercase'
-  }
-}
-
-function getButtonIconCSS(){
-  return {
-    color: 'red'
-  }
-}
