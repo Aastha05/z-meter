@@ -5,7 +5,7 @@ export default function NewTaskButton({label, icon}) {
   return (
     <div css={getButtonCSS}>
       <div css={getButtonNameCSS}>
-        <h4>{label}</h4>
+        <h5>{label}</h5>
       </div>
       <div css={getButtonIconCSS}>
         {icon}
@@ -20,7 +20,8 @@ function getButtonCSS(){
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent:'space-around',
-    flex: '1'
+    flex: '1',
+    cursor:'pointer'
   }
 }
 

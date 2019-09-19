@@ -25,12 +25,26 @@ export default function ApplicationContent() {
             <TableHeadingData>{'ID'}</TableHeadingData>
             <TableHeadingData>{'Title'}</TableHeadingData>
             <TableHeadingData>{'Description'}</TableHeadingData>
+            <TableHeadingData>{'Start Date'}</TableHeadingData>
+            <TableHeadingData>{'Due Date'}</TableHeadingData>
+            <TableHeadingData>{'Assigned To'}</TableHeadingData>
+            <TableHeadingData>{'Created By'}</TableHeadingData>
+            <TableHeadingData>{'Tag'}</TableHeadingData>
+            <TableHeadingData>{'Status'}</TableHeadingData>
           </TableRow>
         </TableHead>
         <TableBody>
-          <TableData>{'101'}</TableData>
-          <TableData>{'API'}</TableData>
-          <TableData>{'Create Backend APIs'}</TableData>
+          <TableRow>
+            <TableData>{'101'}</TableData>
+            <TableData>{'API'}</TableData>
+            <TableData>{'Create Backend APIs'}</TableData>
+            <TableData>{'20 Sept, 2019'}</TableData>
+            <TableData>{'02 Oct, 2019'}</TableData>
+            <TableData>{'Jane'}</TableData>
+            <TableData>{'Aastha'}</TableData>
+            <TableData>{'#backend'}</TableData>
+            <TableData>{''}</TableData>
+          </TableRow>
         </TableBody>
       </Table>
     </div>

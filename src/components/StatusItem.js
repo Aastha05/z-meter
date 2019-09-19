@@ -21,10 +21,10 @@ StatusItem.status = {
 
 const colors = {
   inProgress: {
-    borderLeftColor: 'orange'
+    borderLeftColor: 'f77754'
   },
   toDo: {
-    borderLeftColor: 'blue'
+    borderLeftColor: '1089ff'
   },
   complete: {
     borderLeftColor: 'green'
@@ -39,9 +39,10 @@ function getStatusItemCSS(isActive, statusStyle) {
     cursor: 'pointer',
     paddingLeft: '16px',
     paddingRight: '16px',
-    backgroundColor: isActive ? 'rgba(0,0,0,.05)' : 'transparent',
+    backgroundColor: isActive ? '#fff' : 'transparent',
+    marginLeft: isActive ? '13px' : '',
     '&:hover': {
-      backgroundColor: 'rgba(0,0,0,.05)',
+      color: '#6f0765'
     },
     border: 'solid 2px transparent',
     borderLeftWidth: '3px',
@@ -51,7 +52,9 @@ function getStatusItemCSS(isActive, statusStyle) {
 
 function getStatusTextCSS() {
   return {
-    marginLeft: '27px'
+    marginLeft: '27px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
   }
 }
 

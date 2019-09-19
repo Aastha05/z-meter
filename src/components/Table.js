@@ -1,7 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import TableHead from './TableHead';
-import TableBody from './TableBody';
 
 export default function Table({ children }) {
   return (
@@ -16,7 +14,10 @@ export default function Table({ children }) {
 
 function getTableWrapperCSS() {
   return {
-    display: 'flex'
+    display: 'flex',
+    marginTop: '100',
+    paddingRight: '25px',
+    paddingLeft: '25px',
   }
 
 }

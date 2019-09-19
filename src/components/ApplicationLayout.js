@@ -11,10 +11,10 @@ export default function ApplicationLayout({ }) {
   return (
     <Widget>
       <Row margin={-8}>
-        <Col width={1 / 4}>
+        <Col width={1 / 6}>
           <MainNav />
         </Col>
-        <Col width={1 / 4}>
+        <Col width={1 / 5}>
           <SecondaryNav />
         </Col>
         <Col width={1}>
@@ -28,10 +28,10 @@ export default function ApplicationLayout({ }) {
 
 function getGlobalCSS() {
   return css(`
-    @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=PT+Sans|Raleway&display=swap');
     body {
       margin: 0px;
-      font-family: 'Rubik', sans-serif;
+      font-family: 'Raleway', sans-serif;
     }
   `)
 }

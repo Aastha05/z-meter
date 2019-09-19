@@ -2,15 +2,14 @@
 import { jsx } from '@emotion/core';
 import Header from './Header';
 import Menu from './Menu';
-import Logo from './Logo';
 import MenuItem from './MenuItem';
-import Icon from './Icon';
+import LogoTitle from './Title';
 
 export default function MainNav() {
   return (
     <div css={getMainNavWrapperCSS}>
       <Header>
-        <Logo label="Z-Task" />
+        <LogoTitle label="Z-Task" />
       </Header>
       <Menu>
         <MenuItem label='Today' />

@@ -8,7 +8,7 @@ export default function TopRightNav({ userImg, icon, userName }) {
         {userImg}
       </div>
       <div css={getUserNameCSS}>
-        <h4>{userName}</h4>
+        <h5>{userName}</h5>
       </div>
       <div css={getNotifyCSS}>
         {icon}

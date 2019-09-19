@@ -7,8 +7,9 @@ export default function TableHeadingData({ children }) {
 
 function getTableHeadingDataCSS() {
   return {
-    border: '1px solid #dddd',
-    padding: '8px',
-    textAlign: 'left'
+    // border: '1px solid #dddd',
+    padding: '20px 15px',
+    textAlign: 'left',
+    fontSize: '14px'
   }
 }
